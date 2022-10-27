@@ -186,11 +186,12 @@ exec sp_CadItensPedido 3, 3, 5
 
 select *
 from Itens_Pedidos
+go
 
 
 --criar uma procedure para dar baixa em estoque
 --Sempre que um produto for cadastrado como um item de pedido
---Esta acusando uma falha que ainda não estou localizando
+--Falha corrijida ao colocar "GO" na linha 189 
 create procedure sp_BaixaEstoque
     (
     @idProd int,
